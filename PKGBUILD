@@ -5,7 +5,7 @@ _pypiname=passlib
 pkgbase=python-$_pypiname
 pkgname=(python-$_pypiname python2-$_pypiname)
 pkgver=1.6.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A password hashing library for Python"
 arch=('any')
 url=("https://code.google.com/p/passlib/")
@@ -22,7 +22,7 @@ package_python-passlib() {
   depends=("python")
 
   cd ${_pypiname}-${pkgver}
-  python setup.py install --root="${pkgdir}"
+  python setup.py install -O1 --root="${pkgdir}"
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
 
@@ -31,7 +31,7 @@ package_python2-passlib() {
   optdepends=("python2-m2crypto: accelerate PBKDF2-based hashes")
 
   cd python2-${_pypiname}-${pkgver}
-  python2 setup.py install --root="${pkgdir}"
+  python2 setup.py install -O1 --root="${pkgdir}"
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
 
