@@ -92,7 +92,7 @@ optdepends=(
   "${_scrypt_optdepends[*]}"
 )
 _pypa="https://pypi.io/packages/source"
-_ns="${_pkg::0}"
+_ns="${_pkg::1}"
 _url="${_pypa}/${_ns}/${_pkg}"
 _tarname="${_pkg}-${pkgver}"
 source=(
