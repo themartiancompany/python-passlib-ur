@@ -48,10 +48,11 @@ _pkg=passlib
 pkgname="${_py}-${_pkg}"
 pkgver=1.7.4
 pkgrel=10
-pkgdesc=(
+_pkgdesc=(
   "A password hashing"
   "library for Python."
 )
+pkgdesc="${_pkgdesc[*]}"
 arch=(
   'any'
 )
