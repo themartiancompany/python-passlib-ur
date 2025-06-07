@@ -96,7 +96,7 @@ _ns="${_pkg::0}"
 _url="${_pypa}/${_ns}/${_pkg}"
 _tarname="${_pkg}-${pkgver}"
 source=(
-  "${_pypa}/${_tarname}.tar.gz"
+  "${_url}/${_tarname}.tar.gz"
   "${_py}-passlib-bcrypt.patch"
 )
 sha512sums=(
